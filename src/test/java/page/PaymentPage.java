@@ -37,15 +37,15 @@ public class PaymentPage {
         continueButton.click();
     }
 
-    public void notificationOk() {
-        notificationOK.waitUntil(visible, 12000);
+    public void waitNotificationOk() {
+        notificationOK.shouldBe(visible,Duration.ofMillis(12000));
     }
 
-    public void notificationError() {
-        notificationError.waitUntil(visible, 12000);
+    public void waitNotificationError() {
+        notificationError.shouldBe(visible,Duration.ofMillis(12000));
     }
 
-    public String inputInvalid() {
+    public String getInputInvalid() {
         return inputInvalid.getText();
     }
 
